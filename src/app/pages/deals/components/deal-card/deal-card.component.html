@@ -1,0 +1,16 @@
+<div class="deal-card" [title]="cardData.title">
+    <div class="title">{{ cardData.title }}</div>
+    <div class="desc">
+        <ng-container *ngIf="cardData.salePrice !== '0.00'; else normalPrice">
+            <span><del>${{ cardData.normalPrice }}</del></span>
+        </ng-container>
+        <ng-template #normalPrice>
+            <span>${{ cardData.normalPrice }}</span>
+        </ng-template>
+        <span *ngIf="cardData.salePrice !== '0.00'" class="sale">${{ cardData.salePrice }}</span>
+    </div>
+    <div class="action">
+        <!-- <a [routerLink]="['details', cardData.dealID]">View More</a> -->
+        <a (click)="viewMore(cardData.dealID)">View More</a>
+    </div>
+</div>

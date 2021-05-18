@@ -1,0 +1,56 @@
+:host {
+    .deal-card {
+        background: #FBFBFB;
+        box-shadow: 0px 12px 24px rgba(44, 39, 56, 0.02), 0px 24px 48px rgba(44, 39, 56, 0.04);
+        border-radius: 24px;
+        padding: 30px 20px;
+        width: 352px;
+
+        .title {
+            font-family: IBM Plex Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 36px;
+            color: #2C2738;
+            margin-bottom: 9px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .desc {
+            font-family: IBM Plex Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 21px;
+            color: #2C2738;
+            height: 44px;
+            margin-bottom: 8px;
+
+            .sale {
+                color: #14A38B;
+                margin-left: 10px;
+            }
+        }
+
+        .action {
+            a {
+                width: 140px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                background: #FBFBFB;
+                border: 1px solid #2C2738;
+                box-sizing: border-box;
+                box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.0001), 0px 4px 8px rgba(44, 39, 56, 0.08);
+                border-radius: 6px;
+                text-decoration: none;
+                justify-content: center;
+                color: #2C2738;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+<div class="deal-details">
+    <div class="wrapper {{!dealInfoForView ? 'error' : null}}">
+        <ng-container *ngIf="dealInfoForView && !isLoading">
+            <div class="content">
+                <div class="title">{{ dealInfoForView.gameInfo.name }}</div>
+                <div class="descr">
+                    <div class="price">
+                        <ng-container *ngIf="dealInfoForView.gameInfo.salePrice !== '0.00'; else normalPrice">
+                            <span><del>${{ dealInfoForView.gameInfo.retailPrice }}</del></span>
+                        </ng-container>
+                        <ng-template #normalPrice>
+                            <span>${{ dealInfoForView.gameInfo.retailPrice }}</span>
+                        </ng-template>
+                        <span *ngIf="dealInfoForView.gameInfo.salePrice !== '0.00'" class="sale">${{ dealInfoForView.gameInfo.salePrice }}</span>
+                    </div>
+                    <div class="tip">{{ savingText }}</div>
+                </div>
+                <div class="store" *ngIf="gameStoreName">Available at {{ gameStoreName }}</div>
+                <div class="image" [ngStyle]="{'background-image': 'url(' +  dealInfoForView.gameInfo.thumb + ')'}"></div>
+            </div>
+            <div class="sidebar">
+                <div class="title">
+                    <p>Other deals for this game</p>
+                </div>
+                <app-sidebar></app-sidebar>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="!dealInfoForView && !isLoading">
+            <div class="no-data">
+                <p>Whoops! Looks like something went wrong. Please try again.</p>
+                <button mat-raised-button color="primary" (click)="reloadPage()">Try again</button>
+            </div>
+        </ng-container>
+    
+        <ng-container *ngIf="!dealInfoForView && isLoading">
+            <mat-spinner></mat-spinner>
+        </ng-container>
+    </div>
+</div>

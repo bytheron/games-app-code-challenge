@@ -1,0 +1,122 @@
+:host {
+    .deal-details {
+        padding: 107px 105px;
+        display: flex;
+        justify-content: center;
+        
+        .wrapper {
+            width: 1342px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 0 104px;
+
+            &.error {
+                display: flex;
+                justify-content: center;
+            }
+
+            .content {
+                .title {
+                    font-family: IBM Plex Sans;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 28px;
+                    line-height: 36px;
+                    color: #000000;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-bottom: 9px;
+                }
+
+                .descr {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    .price {
+                        font-family: IBM Plex Sans;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 31px;
+
+                        .sale {
+                            color: #14A38B;
+                            margin-left: 10px;
+                        }
+
+                    }
+
+                    .tip {
+                        font-family: IBM Plex Sans;
+                        font-style: italic;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 31px;
+                    }
+                }
+                
+                .store {
+                    background-color: #F8F8F8;
+                    width: calc(646px - (25px * 2));
+                    height: 86.48px;
+                    padding: 0 25px;
+                    display: flex;
+                    align-items: center;
+                    margin: 44px 0 17px 0;
+                    font-family: IBM Plex Sans;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 31px;
+                    color: #000;
+                }
+
+                .image {
+                    width: 645px;
+                    height: 498px;
+                    background-color: #F8F8F8;
+                    background-repeat: no-repeat;
+                    // set to center as images might distort
+                    background-position: center;
+                }
+            }
+
+            .sidebar {
+                .title {
+                    width: calc(460px - (18px * 2));
+                    height: 83px;
+                    padding: 0 18px;
+                    background-color: #F8F8F8;
+                    display: flex;
+                    align-items: center;
+                    font-family: IBM Plex Sans;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 31px;
+                    color: #000;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .no-data {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            
+            p {
+                font-size: 22px;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+:host {
+    .main-content {
+        flex: 1 0 auto;
+        padding: 117px 112px;
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 80px;
+
+            .no-data {
+                p {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

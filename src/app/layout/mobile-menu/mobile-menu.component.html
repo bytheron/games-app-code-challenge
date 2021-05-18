@@ -1,0 +1,9 @@
+<div class="mobile-menu">
+    <div class="wrapper">
+        <div class="nav">
+            <ng-container *ngFor="let link of links">
+                <a [routerLink]="link.path" class="link">{{ link.title }}</a>
+            </ng-container>
+        </div>
+    </div>
+</div>

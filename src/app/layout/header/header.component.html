@@ -1,0 +1,15 @@
+<div class="header">
+    <div class="wrapper">
+        <div class="logo" [routerLink]="''">
+            <div class="img"></div>
+            <div class="text">CheapShark</div>
+        </div>
+        <ng-container *ngIf="!isMobileLayout">
+            <div class="nav">
+                <ng-container *ngFor="let link of links">
+                    <a [routerLink]="link.path" class="link" routerLinkActive="active">{{ link.title }}</a>
+                </ng-container>
+            </div>
+        </ng-container>
+    </div>
+</div>

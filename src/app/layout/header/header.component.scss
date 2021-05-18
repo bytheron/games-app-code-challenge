@@ -1,0 +1,72 @@
+:host {
+    .header {
+        background-color: #fff;
+        box-shadow: 0 -3px 50px rgba(0,0,0,0.1);
+        border-radius: 0 0 30px 30px;
+        width: 100%;
+        min-height: 180px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 auto;
+
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 1342px;
+
+            .logo {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                .img {
+                    width: 60px;
+                    height: 60px;
+                    background-image: url('./../../../assets/logo.png');
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    overflow: hidden;
+                    border-radius: 50%;
+                }
+
+                .text {
+                    margin-left: 37px; // strange number - as per design
+                    font-family: IBM Plex Sans;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 28px;
+                    line-height: 36px;
+                    color: #000000;
+                }
+            }
+
+            .nav {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .link {
+                    font-family: IBM Plex Sans;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 26px;
+                    color: #2C2738;
+                    text-decoration: none;
+
+                    &.active,
+                    &:hover {
+                        color: #14A38B;
+                    }
+
+                    &:nth-child(2) {
+                        margin: 0 45px; // as per design
+                    }
+                }
+            }
+        }
+    }
+}
