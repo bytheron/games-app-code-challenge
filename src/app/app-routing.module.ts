@@ -21,7 +21,7 @@ const routes: Routes = [
     path: 'details/:id', component: DealDetailComponent
   },
   {
-    path: '*', component: ErrorComponent
+    path: '**', component: ErrorComponent
   }
 ];
 

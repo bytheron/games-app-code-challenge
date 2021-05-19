@@ -4,18 +4,18 @@
             <div class="text">{{ pageData.title }}</div>
             <div class="search desktop">
                 <form class="search-form">
-                    <input type="text" [placeholder]="pageData.searchPlaceholder" formControlName="desktopSearch">
+                    <input type="text" [placeholder]="pageData.searchPlaceholder" #desktopSearch (keyup)="filterResults(desktopSearch.value)">
                     <mat-icon>search</mat-icon>
                 </form>
             </div>
         </div>
         <div class="search">
             <form class="search-form">
-                <input type="text" [placeholder]="pageData.searchPlaceholder" formControlName="mobileSearch">
+                <input type="text" [placeholder]="pageData.searchPlaceholder" #mobileSearch (keyup)="filterResults(mobileSearch.value)">
                 <mat-icon>search</mat-icon>
             </form>
         </div>
-        <div class="content {{pageData.noFlex ? 'no-flex' : null}}">
+        <div class="content">
             <ng-content></ng-content>
             <ng-container *ngIf="!data && !isLoading">
                 <div class="no-data">
@@ -24,7 +24,7 @@
                 </div>
             </ng-container>
     
-            <ng-container *ngIf="!data && isLoading">
+            <ng-container *ngIf="!data && isLoading || data && !isLoading && isSearching">
                 <mat-spinner></mat-spinner>
             </ng-container>
         </div>

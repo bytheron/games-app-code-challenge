@@ -12,6 +12,7 @@ export class MainComponent implements OnInit {
   public isLoading: boolean;
   public isMobileLayout: boolean;
   public mainPageData: any;
+  public cardsFiltered: Observable<any>;
 
   constructor(private dealsService: CheapSharkService) { }
 
@@ -30,6 +31,10 @@ export class MainComponent implements OnInit {
       if (resp) this.isLoading = false;
       this.cards$ = resp;
     });
+  }
+
+  public filterDataWithSearchResults(event) {
+    this.cardsFiltered = event;
   }
 
 }

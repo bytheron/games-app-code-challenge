@@ -1,6 +1,11 @@
-<app-main-template [viewData]="cards$" [isLoading]="isLoading" [pageData]="mainPageData">
-    <ng-container *ngIf="cards$ && !isLoading">
+<app-main-template [viewData]="cards$" [isLoading]="isLoading" [pageData]="mainPageData" (searchResultsData)="filterDataWithSearchResults($event)">
+    <ng-container *ngIf="cards$ && !cardsFiltered && !isLoading">
         <ng-container *ngFor="let card of cards$">
+            <app-deal-card [cardData]="card"></app-deal-card>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="cards$ && cardsFiltered && !isLoading">
+        <ng-container *ngFor="let card of cardsFiltered">
             <app-deal-card [cardData]="card"></app-deal-card>
         </ng-container>
     </ng-container>

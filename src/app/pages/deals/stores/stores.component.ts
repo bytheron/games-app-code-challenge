@@ -17,8 +17,7 @@ export class StoresComponent implements OnInit {
   ngOnInit(): void {
     this.storesPageData = {
       title: 'Stores',
-      searchPlaceholder: 'Search stores by name',
-      noFlex: true
+      searchPlaceholder: 'Search stores by name'
     };
 
     this.isLoading = true;

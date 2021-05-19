@@ -97,19 +97,14 @@
             }
     
             .content {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: column;
-                justify-content: center;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
                 gap: 24px;
                 
                 @media screen and (min-width: 1024px) {
-                    flex-direction: row;
+                    grid-template-columns: 1fr 1fr 1fr;
                     gap: 80px;
-                }
-
-                &.no-flex {
-                    justify-content: space-between;
                 }
     
                 .no-data {
