@@ -14,11 +14,11 @@ export class DealDetailComponent implements OnInit, OnDestroy {
   private deal$: Observable<any>;
   private stores$: Observable<any>;
   private dealInfo: DealDetailInterface;
-  private stores: any[];
   private dealIDFromParams: string;
   private unsubscribe$: Subject<void> = new Subject<void>();
   private timer: any;
-
+  
+  public stores: any[];
   public dealInfoForView: DealDetailInterface;
   public isLoading: boolean;
   public savingText: string;

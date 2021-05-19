@@ -1,0 +1,35 @@
+<div class="main-content">
+    <div class="title">
+        <div class="text">{{ pageData.title }}</div>
+        <ng-container *ngif="!isMobile">
+            <div class="search">
+                <form class="search-form desktop">
+                    <mat-form-field>
+                      <input type="text" matInput [placeholder]="pageData.searchPlaceholder">
+                      <mat-icon matSuffix>search</mat-icon>
+                    </mat-form-field>
+                </form>
+            </div>
+        </ng-container>
+    </div>
+    <div class="search">
+        <form class="search-form">
+            <mat-form-field>
+              <input type="text" matInput [placeholder]="pageData.searchPlaceholder">
+              <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+        </form>
+    </div>
+    <div class="content">
+        <ng-content></ng-content>
+        <ng-container *ngIf="!data && !isLoading">
+            <div class="no-data">
+                <p>Whoops! Looks like something went wrong. Please try again.</p>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="!data && isLoading">
+            <mat-spinner></mat-spinner>
+        </ng-container>
+    </div>
+</div>

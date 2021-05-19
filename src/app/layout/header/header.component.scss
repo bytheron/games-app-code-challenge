@@ -1,7 +1,9 @@
+@import './../../../assets/style-helpers/colors';
+
 :host {
     .header {
-        background-color: #fff;
-        box-shadow: 0 -3px 50px rgba(0,0,0,0.1);
+        background-color: $header-color;
+        box-shadow: 0 -3px 50px $drop-shadow;
         border-radius: 0 0 30px 30px;
         width: 100%;
         min-height: 180px;
@@ -39,7 +41,7 @@
                     font-weight: 500;
                     font-size: 28px;
                     line-height: 36px;
-                    color: #000000;
+                    color: $main-font-color;
                 }
             }
 
@@ -54,12 +56,12 @@
                     font-weight: 600;
                     font-size: 20px;
                     line-height: 26px;
-                    color: #2C2738;
+                    color: $secondary-font-color;
                     text-decoration: none;
 
                     &.active,
                     &:hover {
-                        color: #14A38B;
+                        color: $highlight-1;
                     }
 
                     &:nth-child(2) {

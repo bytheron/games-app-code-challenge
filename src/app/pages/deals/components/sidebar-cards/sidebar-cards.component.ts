@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar-cards',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar-cards.component.scss']
 })
 export class SidebarCardsComponent implements OnInit {
+  @Input() cardData: any;
 
   constructor() { }
 

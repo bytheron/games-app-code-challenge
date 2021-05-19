@@ -1,27 +1,7 @@
-<div class="main-content">
-    <div class="title">
-        <div class="text"></div>
-        <ng-container *ngif="!isMobile">
-            <div class="search"></div>
+<app-main-template [viewData]="cards$" [isLoading]="isLoading" [isMobile]="isMobileLayout" [pageData]="mainPageData">
+    <ng-container *ngIf="cards$ && !isLoading">
+        <ng-container *ngFor="let card of cards$">
+            <app-deal-card [cardData]="card"></app-deal-card>
         </ng-container>
-    </div>
-    <div class="search"></div>
-    <div class="filter"></div>
-    <div class="cards">
-        <ng-container *ngIf="cards$ && !isLoading">
-            <ng-container *ngFor="let card of cards$">
-                <app-deal-card [cardData]="card"></app-deal-card>
-            </ng-container>
-        </ng-container>
-
-        <ng-container *ngIf="!cards$ && !isLoading">
-            <div class="no-data">
-                <p>Whoops! Looks like something went wrong. Please try again.</p>
-            </div>
-        </ng-container>
-
-        <ng-container *ngIf="!cards$ && isLoading">
-            <mat-spinner></mat-spinner>
-        </ng-container>
-    </div>
-</div>
+    </ng-container>
+</app-main-template>

@@ -22,7 +22,7 @@
                 <div class="title">
                     <p>Other deals for this game</p>
                 </div>
-                <app-sidebar></app-sidebar>
+                <app-sidebar [otherStoreData]="dealInfoForView.cheaperStores" [storeNames]="stores"></app-sidebar>
             </div>
         </ng-container>
         <ng-container *ngIf="!dealInfoForView && !isLoading">

@@ -1,3 +1,5 @@
+@import './../../../../assets/style-helpers/colors';
+
 :host {
     .deal-details {
         padding: 107px 105px;
@@ -23,7 +25,7 @@
                     font-weight: 500;
                     font-size: 28px;
                     line-height: 36px;
-                    color: #000000;
+                    color: $main-font-color;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -44,7 +46,7 @@
                         line-height: 31px;
 
                         .sale {
-                            color: #14A38B;
+                            color: $highlight-1;
                             margin-left: 10px;
                         }
 
@@ -60,7 +62,7 @@
                 }
                 
                 .store {
-                    background-color: #F8F8F8;
+                    background-color: $bg-color-2;
                     width: calc(646px - (25px * 2));
                     height: 86.48px;
                     padding: 0 25px;
@@ -72,13 +74,13 @@
                     font-weight: 500;
                     font-size: 24px;
                     line-height: 31px;
-                    color: #000;
+                    color: $main-font-color;
                 }
 
                 .image {
                     width: 645px;
                     height: 498px;
-                    background-color: #F8F8F8;
+                    background-color: $bg-color-2;
                     background-repeat: no-repeat;
                     // set to center as images might distort
                     background-position: center;
@@ -90,7 +92,7 @@
                     width: calc(460px - (18px * 2));
                     height: 83px;
                     padding: 0 18px;
-                    background-color: #F8F8F8;
+                    background-color: $bg-color-2;
                     display: flex;
                     align-items: center;
                     font-family: IBM Plex Sans;
@@ -98,7 +100,7 @@
                     font-weight: 500;
                     font-size: 24px;
                     line-height: 31px;
-                    color: #000;
+                    color: $main-font-color;
 
                     p {
                         margin: 0;

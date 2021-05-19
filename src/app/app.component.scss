@@ -1,9 +1,11 @@
+@import './../assets/style-helpers/colors';
+
 html, body {
     height: 100%;
 }
 
 body {
-    color: #E5E5E5;
+    color: $bg-color;
     &.mat-typography {
         display: flex;
         flex-direction: column;

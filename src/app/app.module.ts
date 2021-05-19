@@ -16,7 +16,7 @@ import { SidebarComponent } from './pages/deals/components/sidebar/sidebar.compo
 import { SidebarCardsComponent } from './pages/deals/components/sidebar-cards/sidebar-cards.component';
 import { StoreCardComponent } from './pages/deals/components/store-card/store-card.component';
 import { FormComponent } from './pages/deals/components/form/form.component';
-import { MaterialModule } from './layout/material.module';
+import { PageLayoutModule } from './layout/layout.module';
 
 
 @NgModule({
@@ -39,7 +39,7 @@ import { MaterialModule } from './layout/material.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialModule
+    PageLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
