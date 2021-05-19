@@ -1,18 +1,57 @@
+@import './../../../assets/style-helpers/colors';
+
 :host {
-    .main-content {
-        width: 1342px;
-        flex: 1 0 auto;
-        padding: 117px 112px;
+    .main-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 80px;
+        .main-content {
+            width: 1342px;
+            padding: 117px 112px;
+    
+            .title {
+                font-family: IBM Plex Sans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 48px;
+                line-height: 62px;
+                letter-spacing: 1.5px;
+                color: $main-font-color;
+                margin-bottom: 65px;
 
-            .no-data {
-                p {
-                    font-size: 30px;
+                @media screen and (min-width: 1024px) {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+            .search {
+                
+                @media screen and (min-width: 1024px) {
+                    display: none;
+                }
+
+                &.desktop {
+                    display: initial;
+                }
+            }
+    
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 80px;
+
+                &.no-flex {
+                    justify-content: space-between;
+                }
+    
+                .no-data {
+                    p {
+                        font-size: 30px;
+                    }
                 }
             }
         }

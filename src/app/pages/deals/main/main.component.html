@@ -1,4 +1,4 @@
-<app-main-template [viewData]="cards$" [isLoading]="isLoading" [isMobile]="isMobileLayout" [pageData]="mainPageData">
+<app-main-template [viewData]="cards$" [isLoading]="isLoading" [pageData]="mainPageData">
     <ng-container *ngIf="cards$ && !isLoading">
         <ng-container *ngFor="let card of cards$">
             <app-deal-card [cardData]="card"></app-deal-card>

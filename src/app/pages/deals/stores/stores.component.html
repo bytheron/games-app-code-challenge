@@ -1,3 +1,5 @@
-<app-main-template [viewData]="stores$" [isLoading]="isLoading" [isMobile]="isMobileLayout" [pageData]="storesPageData">
-
+<app-main-template [viewData]="stores$" [isLoading]="isLoading" [pageData]="storesPageData">
+    <ng-container *ngFor="let card of stores$">
+        <app-store-card [cardData]="card"></app-store-card>
+    </ng-container>
 </app-main-template>

@@ -17,6 +17,7 @@ import { SidebarCardsComponent } from './pages/deals/components/sidebar-cards/si
 import { StoreCardComponent } from './pages/deals/components/store-card/store-card.component';
 import { FormComponent } from './pages/deals/components/form/form.component';
 import { PageLayoutModule } from './layout/layout.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { PageLayoutModule } from './layout/layout.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    PageLayoutModule
+    PageLayoutModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

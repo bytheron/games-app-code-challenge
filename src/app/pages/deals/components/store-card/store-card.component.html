@@ -1,1 +1,13 @@
-<p>store-card works!</p>
+<div class="store-card">
+    <div class="header" [ngStyle]="{'background-image': 'url(' +  bannerImage + ')'}">
+    </div>
+    <div class="title">
+        {{ cardData.storeName }}
+    </div>
+    <div class="descr">
+        {{ cardData.storeDeals ? cardData.storeDeals : 'No deals at this time' }}
+    </div>
+    <div class="action">
+        <a (click)="viewMore()">View More</a>
+    </div>
+</div>

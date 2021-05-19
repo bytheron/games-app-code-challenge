@@ -1,0 +1,56 @@
+@import './../../../../../assets/style-helpers/colors';
+
+:host {
+    .store-card {
+        width: calc(352px - (16px * 2));
+        background-color: $faded-gray;
+        padding: 16px;
+        border-radius: 24px;
+
+        .header {
+            background-color: $faded-gray-2;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            border-radius: 16px;
+            width: 320px;
+            height: 197px;
+            margin-bottom: 42px;
+        }
+
+        .title {
+            font-family: IBM Plex Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 36px;
+            color: $main-font-color;
+            margin-bottom: 16px;
+        }
+
+        .descr {
+            font-family: IBM Plex Sans;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+            color: $secondary-font-color;
+            margin-bottom: 18px;
+        }
+
+        .action {
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 48px;
+                width: 140px;
+                background-color: $faded-gray;
+                border: 1px solid $border-color;
+                border-radius: 6px;
+                box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.0001), 0px 4px 8px rgba(44, 39, 56, 0.08);
+                cursor: pointer;
+            }
+        }
+    }
+}

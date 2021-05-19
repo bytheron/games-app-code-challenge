@@ -1,4 +1,3 @@
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CheapSharkService } from 'src/app/core/services/cheap-shark.service';
@@ -14,17 +13,9 @@ export class MainComponent implements OnInit {
   public isMobileLayout: boolean;
   public mainPageData: any;
 
-  constructor(public breakpointObserver: BreakpointObserver, private dealsService: CheapSharkService) { }
+  constructor(private dealsService: CheapSharkService) { }
 
   ngOnInit(): void {
-    this.breakpointObserver.observe([
-      Breakpoints.HandsetLandscape,
-      Breakpoints.HandsetPortrait
-    ]).subscribe(result => {
-      if (result.matches) this.isMobileLayout = true;
-      else this.isMobileLayout = false;
-    });
-
     this.mainPageData = {
       title: 'Deals',
       searchPlaceholder: 'Search deals by name'
