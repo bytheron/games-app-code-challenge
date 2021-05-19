@@ -44,8 +44,54 @@
 
                 &.desktop {
                     display: none;
+
                     @media screen and (min-width: 1024px) {
                         display: initial;
+
+                        .search-form {
+                            font-size: initial;
+                            line-height: initial;
+                            position: relative;
+                            background: #FFFFFF;
+                            border: 1px solid #DBE2EA;
+                            box-sizing: border-box;
+                            border-radius: 6px;
+                            width: 360px;
+                            padding: 16px;
+                            
+        
+                            input {
+                                width: 287px;
+                            }
+        
+                            .mat-icon {
+                                position: absolute;
+                                right: 11px;
+                            }
+                        }
+                    }
+                }
+
+                .search-form {
+                    font-size: initial;
+                    line-height: initial;
+                    position: relative;
+                    padding: 6px 14px;
+                    background: #FFFFFF;
+                    border: 1px solid #DBE2EA;
+                    box-sizing: border-box;
+                    border-radius: 6px;
+                    width: 100%;
+
+                    input {
+                        border: 0;
+                        outline: 0;
+                        width: 100%;
+                    }
+
+                    .mat-icon {
+                        position: absolute;
+                        right: 4px;
                     }
                 }
             }

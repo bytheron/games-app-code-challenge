@@ -4,19 +4,15 @@
             <div class="text">{{ pageData.title }}</div>
             <div class="search desktop">
                 <form class="search-form">
-                    <mat-form-field>
-                        <input type="text" matInput [placeholder]="pageData.searchPlaceholder" formControlName="desktopSearch">
-                        <mat-icon matSuffix>search</mat-icon>
-                    </mat-form-field>
+                    <input type="text" [placeholder]="pageData.searchPlaceholder" formControlName="desktopSearch">
+                    <mat-icon>search</mat-icon>
                 </form>
             </div>
         </div>
         <div class="search">
             <form class="search-form">
-                <mat-form-field>
-                    <input type="text" matInput [placeholder]="pageData.searchPlaceholder" formControlName="mobileSearch">
-                    <mat-icon matSuffix>search</mat-icon>
-                </mat-form-field>
+                <input type="text" [placeholder]="pageData.searchPlaceholder" formControlName="mobileSearch">
+                <mat-icon>search</mat-icon>
             </form>
         </div>
         <div class="content {{pageData.noFlex ? 'no-flex' : null}}">
