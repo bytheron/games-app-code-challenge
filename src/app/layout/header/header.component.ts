@@ -15,7 +15,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.breakpointObserver.observe([
       Breakpoints.HandsetLandscape,
-      Breakpoints.HandsetPortrait
+      Breakpoints.HandsetPortrait,
+      Breakpoints.TabletPortrait
     ]).subscribe(result => {
       if (result.matches) this.isMobileLayout = true;
       else this.isMobileLayout = false;

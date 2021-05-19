@@ -2,10 +2,14 @@
 
 :host {
     .store-card {
-        width: calc(352px - (16px * 2));
+        width: calc(100% - (16px * 2));
         background-color: $faded-gray;
         padding: 16px;
         border-radius: 24px;
+
+        @media screen and (min-width: 1024px) {
+            width: calc(352px - (16px * 2));
+        }
 
         .header {
             background-color: $faded-gray-2;
@@ -13,9 +17,18 @@
             background-size: contain;
             background-position: center;
             border-radius: 16px;
-            width: 320px;
-            height: 197px;
             margin-bottom: 42px;
+            width: 100%;
+            min-width: calc(100% - (16px * 2));
+            height: 197px;
+
+            @media screen and (min-width: 768px) {
+                height: 400px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                height: 192px;
+            }
         }
 
         .title {

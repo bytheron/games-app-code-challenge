@@ -7,42 +7,60 @@
         align-items: center;
 
         .main-content {
-            width: 1342px;
-            padding: 117px 112px;
+            width: calc(100% - (25px * 2));
+            padding: 29px 25px;
+
+            @media screen and (min-width: 1360px) {
+                width: 1342px;
+                padding: 117px 112px;
+            }
     
             .title {
                 font-family: IBM Plex Sans;
                 font-style: normal;
                 font-weight: 500;
-                font-size: 48px;
-                line-height: 62px;
+                font-size: 28px;
+                line-height: 36px;
                 letter-spacing: 1.5px;
                 color: $main-font-color;
-                margin-bottom: 65px;
-
+                margin-bottom: 15px;
+                margin-left: 12px;
+                
                 @media screen and (min-width: 1024px) {
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
+                    font-size: 48px;
+                    line-height: 62px;
+                    margin-bottom: 65px;
+                    margin-left: 0;
                 }
             }
 
             .search {
-                
                 @media screen and (min-width: 1024px) {
                     display: none;
                 }
 
                 &.desktop {
-                    display: initial;
+                    display: none;
+                    @media screen and (min-width: 1024px) {
+                        display: initial;
+                    }
                 }
             }
     
             .content {
                 display: flex;
                 flex-wrap: wrap;
+                flex-direction: column;
                 justify-content: center;
-                gap: 80px;
+                gap: 24px;
+                
+                @media screen and (min-width: 1024px) {
+                    flex-direction: row;
+                    gap: 80px;
+                }
 
                 &.no-flex {
                     justify-content: space-between;
