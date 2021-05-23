@@ -1,0 +1,58 @@
+@import './../../../../../assets/style-helpers/colors';
+
+:host {
+    .sidebar-card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        min-height: 90px;
+        align-content: center;
+        border-bottom: 0.5px solid #E2E2E2;
+
+        .info {
+            .title {
+                font-family: IBM Plex Sans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 31px;
+                color: $secondary-font-color;
+            }
+
+            .desc {
+                span {
+                    font-family: IBM Plex Sans;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 18px;
+                    text-decoration-line: line-through;
+                    color: $secondary-font-color;
+    
+                    &.sale {
+                        color: $highlight-1;
+                        text-decoration: none;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        .action {
+            margin-right: 20px;
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 48px;
+                width: 140px;
+                background-color: $faded-gray;
+                border: 1px solid $secondary-font-color;
+                border-radius: 6px;
+                box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.0001), 0px 4px 8px rgba(44, 39, 56, 0.08);
+                cursor: pointer;
+            }
+        }
+    }
+}

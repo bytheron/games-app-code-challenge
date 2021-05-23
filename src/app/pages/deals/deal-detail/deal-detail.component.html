@@ -22,7 +22,12 @@
                 <div class="title">
                     <p>Other deals for this game</p>
                 </div>
-                <app-sidebar [otherStoreData]="dealInfoForView.cheaperStores" [storeNames]="stores"></app-sidebar>
+                <ng-container *ngIf="dealInfoForView.cheaperStores && dealInfoForView.cheaperStores.length !== 0; else noSidebarData">
+                    <app-sidebar [otherStoreData]="dealInfoForView" [storeNames]="stores"></app-sidebar>
+                </ng-container>
+                <ng-template #noSidebarData>
+                    <p class="no-data-text">No data found.</p>
+                </ng-template>
             </div>
         </ng-container>
         <ng-container *ngIf="!dealInfoForView && !isLoading">

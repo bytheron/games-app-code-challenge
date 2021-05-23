@@ -1,1 +1,14 @@
-<p>sidebar-cards works!</p>
+<div class="sidebar-card">
+    <div class="info">
+        <div class="title">{{ cardData.storeName }}</div>
+        <div class="desc">
+            <span>${{ cardData.retailPrice }}</span>
+            <ng-container *ngIf="cardData.salePrice && (cardData.salePrice !== '0.00' || cardData.salePrice !== null)">
+                <span class="sale">${{ cardData.salePrice }}</span>
+            </ng-container>
+        </div>
+    </div>
+    <div class="action">
+        <button (click)="viewMore()">View More</button>
+    </div>
+</div>

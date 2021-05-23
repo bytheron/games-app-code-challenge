@@ -19,7 +19,8 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.mainPageData = {
       title: 'Deals',
-      searchPlaceholder: 'Search deals by name'
+      searchPlaceholder: 'Search deals by name',
+      showFilter: true
     };
 
     this.isLoading = true;

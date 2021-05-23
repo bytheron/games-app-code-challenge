@@ -10,7 +10,6 @@
         <span *ngIf="cardData.salePrice !== '0.00'" class="sale">${{ cardData.salePrice }}</span>
     </div>
     <div class="action">
-        <!-- <a [routerLink]="['details', cardData.dealID]">View More</a> -->
         <a (click)="viewMore(cardData.dealID)">View More</a>
     </div>
 </div>

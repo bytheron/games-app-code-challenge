@@ -10,25 +10,30 @@ export class SidebarComponent implements OnInit {
   @Input() storeNames: any[];
 
   public cards: any;
-  private storeNamesList = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.cards = [];
     this.getStoreNames(this.otherStoreData, this.storeNames);
   }
-
-  // TODO: finish this logic - brain hit a null
+  
   private getStoreNames(otherStoreData: any, storeNames: any[]): void {
-    console.log('otherStoreData => ', otherStoreData);
-    console.log('storeNames => ', storeNames);
+    // check the list of stores and compare their IDs
+    // then if they match create an array of store names
     storeNames.forEach(store => {
-      otherStoreData.forEach(data => {
-        if (store.storeID === data.storeID) this.storeNamesList.push(store.storeName);
+      otherStoreData.cheaperStores.forEach(data => {
+        if (store.storeID === data.storeID) this.cards.push(
+            {
+              storeName: store.storeName,
+              retailPrice: data.retailPrice,
+              salePrice: data.salePrice,
+              dealId: data.dealID
+            }
+          );
         else return;
       });
     });
-    console.log('stores details => ', this.storeNamesList);
   }
 
 }

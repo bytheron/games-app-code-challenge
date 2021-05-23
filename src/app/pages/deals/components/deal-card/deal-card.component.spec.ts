@@ -1,10 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
 
 import { DealCardComponent } from './deal-card.component';
 
 describe('DealCardComponent', () => {
   let component: DealCardComponent;
   let fixture: ComponentFixture<DealCardComponent>;
+  let router: Router;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -19,7 +21,7 @@ describe('DealCardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('should navigate to deals'), () => {
+    router.navigateByUrl('deals');
+  }
 });

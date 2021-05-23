@@ -5,6 +5,7 @@ import { StoreCardComponent } from './store-card.component';
 describe('StoreCardComponent', () => {
   let component: StoreCardComponent;
   let fixture: ComponentFixture<StoreCardComponent>;
+  let cardData: any;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -19,7 +20,7 @@ describe('StoreCardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  // it('should create', () => {
+  //   expect(cardData).toBeDefined();
+  // });
 });
